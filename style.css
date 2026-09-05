@@ -1,0 +1,45 @@
+*{box-sizing:border-box}
+body{margin:0;background:#050505;color:#f4c51c;font-family:Arial,Tahoma,sans-serif}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.16;background-image:radial-gradient(#777 1px,transparent 1px);background-size:14px 14px}
+.hero{min-height:145px;border-bottom:2px solid #d9a900;display:flex;align-items:center;justify-content:space-between;gap:30px;padding:22px 6%;background:linear-gradient(120deg,#050505,#17130a,#050505)}
+.brand,.contact{display:flex;align-items:center;gap:12px;min-width:230px}
+.store-logo{font-size:48px}
+.brand h2{margin:0;font-size:25px}
+.brand small{letter-spacing:2px}
+.title{text-align:center;flex:1}
+.title h1{margin:0;font-size:48px;font-style:italic;letter-spacing:2px;text-shadow:0 0 18px #8e6b00}
+.title p{margin:4px 0;color:#fff;font-size:17px}
+.contact{justify-content:flex-end;text-align:right}
+.contact strong{display:block;font-size:16px}
+.contact a{display:block;color:#f4c51c;font-size:25px;font-weight:bold;text-decoration:none;direction:ltr}
+.wa{font-size:40px;color:#22d36d}
+.host{padding:35px 8%;text-align:center;border-bottom:2px solid #d9a900}
+.host h3{font-size:21px;margin:0 0 22px}
+.firmware-grid{max-width:1080px;margin:auto;display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.firmware-grid button,.restore,.social a{background:#111;border:2px solid #d9a900;color:#f4c51c;border-radius:6px;padding:14px 10px;font-weight:bold;font-size:16px;cursor:pointer;transition:.2s}
+.firmware-grid button:hover,.restore:hover,.social a:hover{background:#d9a900;color:#080808;transform:translateY(-2px)}
+.restore{display:block;width:min(390px,90%);margin:22px auto}
+.donate{max-width:720px;margin:15px auto 0;border:2px solid #d9a900;border-radius:6px;padding:16px;font-weight:bold}
+.services{display:grid;grid-template-columns:1.4fr repeat(4,1fr) 1.2fr;gap:18px;align-items:center;padding:35px 6%;background:linear-gradient(#090909,#120e04)}
+.xlogo{text-align:center}
+.controller{font-size:55px}
+.xlogo b{display:block;font-size:42px;font-style:italic}
+.xlogo strong{display:block;font-size:28px}
+.xlogo small{letter-spacing:3px}
+.feature{text-align:center;color:#fff}
+.feature span{display:block;font-size:38px;margin-bottom:10px}
+.feature b{display:block;color:#f4c51c;font-size:12px}
+.feature small{color:#bbb}
+.social{display:grid;gap:9px}
+.social a{text-decoration:none;color:#fff;text-align:center;padding:11px;font-size:14px}
+footer{text-align:center;padding:20px;color:#c7a21a;border-top:1px solid #8f7100}
+@media(max-width:900px){
+ .hero{flex-direction:column}.title h1{font-size:38px}.brand,.contact{justify-content:center}
+ .firmware-grid{grid-template-columns:repeat(2,1fr)}
+ .services{grid-template-columns:repeat(2,1fr)}
+ .xlogo{grid-column:1/-1}
+}
+@media(max-width:520px){
+ .firmware-grid,.services{grid-template-columns:1fr}
+ .title h1{font-size:32px}.contact{min-width:auto}
+}
